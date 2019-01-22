@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_app/src/models/ipModel.dart';
+
 import '../blocs/ip_block.dart';
 
 class MovieList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bloc.fetchAllIp();
+    ipBloc.fetchAllIp();
     return Scaffold(
       appBar: AppBar(
         title: Text('Ip'),
       ),
       body: StreamBuilder(
-        stream: bloc.ipModels,
+        stream: ipBloc.ipModels,
           builder: (context, AsyncSnapshot<IpModel> snapshot) {
             if (snapshot.hasData) {
               return Center(

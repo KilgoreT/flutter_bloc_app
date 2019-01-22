@@ -20,4 +20,4 @@ class IpBlock {
   }
 }
 
-final bloc = IpBlock();
+final ipBloc = IpBlock();
